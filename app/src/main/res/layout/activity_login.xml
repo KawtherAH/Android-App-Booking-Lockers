@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/TitlrLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="158dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:srcCompat="@drawable/logo" />
+        <TextView
+            android:id="@+id/titleLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:textSize="40sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loginContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TitlrLinear">
+        <EditText
+            android:id="@+id/EditUserID"
+            android:layout_width="346dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:hint="ID#"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textColorHint="@color/LightGray"
+            android:textColor="@color/teal_700"
+            android:textAlignment="center"
+            android:textSize="28sp"/>
+
+        <EditText
+            android:id="@+id/EditUserPassword"
+            android:layout_width="346dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:maxLines="1"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/LightGray"
+            android:textColor="@color/teal_700"
+            android:textAlignment="center"
+            android:textSize="28sp"/>
+
+        <Button
+            android:id="@+id/LoginBtn"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/toRegister"
+            android:layout_width="346dp"
+            android:layout_height="50dp"
+            android:text="No account yet? Register now"
+            android:textAlignment="center"
+            android:textColor="@color/Gray"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

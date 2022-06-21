@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="3dp"
+    android:background="@color/White"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/bTiltle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Booking Locker"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search1"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/bTiltle"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/search_view_bg"
+        android:padding="10dp"
+        app:queryHint="Search "
+        android:textSize="22sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lockers_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="469dp"
+        android:layout_above="@id/BottmBar"
+        android:layout_below="@id/search1"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="21dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottmBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/LightGray"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@color/purple_700"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>
